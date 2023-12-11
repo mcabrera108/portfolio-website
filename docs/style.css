@@ -21,7 +21,7 @@
     padding-right: 6px;
 }
 body {
-    background: url(./../img/office.png);
+    background: url(./img/office.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
