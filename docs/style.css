@@ -8,14 +8,16 @@
     --navbar-default-font-color: white;
     --navbar-hover-font-color: rgb(218, 174, 80);
     --main-font-terminal: 'VT323', 'Press+Start+2P', 'Courier New', serif;
+    --navbar-li-bg-color: rgb(116, 55, 26,.75);
+    --navbar-hover-li-bg-color: rgb(180, 89, 47);
 }
 .nav-logo {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 2rem;
+    font-family: var(--main-font-terminal);
+    color: var(--navbar-default-font-color);
 }
 .fa {
     padding-right: 6px;
@@ -26,9 +28,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-}
-h1, h3 {
-    color: var(--navbar-default-font-color);
 }
 header {
     position: fixed;
@@ -41,6 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0px 100px;
+    width: auto;
 }
 ul {
     list-style: none;
@@ -105,6 +105,22 @@ ul {
     height: 100vh;
     color: var(--navbar-default-font-color);
 }
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
 @keyframes cursor {
     50% {
         border-color: transparent;
@@ -121,5 +137,40 @@ ul {
     }
     .occup-para {
         font-size: 1.5rem;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navigation {
+        display: none;
+        width: 100%;
+    }
+    .navigation li:hover {
+        background-color: var(--navbar-hover-li-bg-color)
+    }
+    .nav-container {
+        flex-direction: column;
+        background-color: var(--navbar-li-bg-color);
+        padding: 0;
+    }
+    .navigation #nav-list {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navigation li {
+        text-align: center;
+    }
+    .navigation li .nav-btn {
+        padding: .5rem 1rem;
+    }
+    .navigation.active {
+        display: flex;
+    }
+    .nav-btn i {
+        display: none;
+    }
+    .nav-logo {
+        font-size: 1.5rem;
+        padding: 15px 0px;
     }
 }

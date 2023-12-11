@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementsByClassName("toggle-button")[0],t=document.getElementsByClassName("navigation")[0];e.addEventListener("click",(()=>{t.classList.toggle("active")}))})();

@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementsByClassName("toggle-button"),t=document.getElementById("navigation");e.addEventListener("click",(()=>{t.classList.toggle("active")})),console.log("Hello")})();
