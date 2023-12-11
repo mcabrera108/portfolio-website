@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --navbar-default-bg-color: rgb(53, 53, 53);
+    --navbar-default-font-color: white;
+    --navbar-hover-font-color: rgb(218, 174, 80);
+    --main-font-terminal: 'VT323', 'Press+Start+2P', 'Courier New', serif;
+}
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.fa {
+    padding-right: 6px;
+}
+body {
+    background: url(../img/pixel-art-city.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1, h3 {
+    color: var(--navbar-default-font-color);
+}
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10
+}
+.nav-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+ul {
+    list-style: none;
+}
+#nav-list {
+    display: flex;
+}
+.nav-btn {
+    color: var(--navbar-default-font-color);
+    background: none;
+    font-size: 1.3rem;
+    border: none;
+    padding: 24px 2rem;
+}
+.nav-btn:hover {
+    color: var(--navbar-default-font-color);
+    cursor: pointer;
+}
+.nav-btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background: var(--navbar-hover-font-color);
+    transition: width .5s;
+}
+.nav-btn:hover::after {
+    width: 100%;
+}
+.hello-container {
+    display: inline-block;
+}
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hello-para {
+    margin-bottom: 50px;
+    font-size: 3rem;
+    font-family: var(--main-font-terminal);
+    padding-right: 10px;
+    border-right: 5px solid;
+    letter-spacing: 2px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typeIn 3s steps(25),
+    cursor .4s step-end infinite alternate;
+}
+.occup-para {
+    font-size: 3rem;
+    font-family: var(--main-font-terminal);
+    letter-spacing: 2px;
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--navbar-default-font-color);
+}
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+@keyframes typeIn {
+    0% {
+        width: 0;
+    }
+}
+@media (max-width: 600px) {
+    .hello-para {
+        font-size: 1.5rem;
+    }
+    .occup-para {
+        font-size: 1.5rem;
+    }
+}
