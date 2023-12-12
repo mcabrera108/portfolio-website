@@ -3,11 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --navbar-default-bg-color: rgb(53, 53, 53);
     --navbar-default-font-color: white;
     --navbar-hover-font-color: rgb(218, 174, 80);
     --main-font-terminal: 'VT323', 'Press+Start+2P', 'Courier New', serif;
+    --desc-default-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     --navbar-li-bg-color: rgb(116, 55, 26,.75);
     --navbar-hover-li-bg-color: rgb(180, 89, 47);
 }
@@ -35,6 +39,57 @@ header {
     width: 100%;
     z-index: 10
 }
+.about-me-header {
+    color: var(--navbar-default-font-color);
+    font-family: var(--main-font-terminal);
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+.desc-header {
+    font-size: 2.7rem;
+    color: var(--navbar-default-font-color);
+    font-family: var(--main-font-terminal);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.desc-para {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
+    color: var(--navbar-default-font-color);
+    font-family: var(--desc-default-font);
+    text-align: center;
+}
+.about-me-main-container {
+    display: flex;
+    background-color: var(--navbar-li-bg-color);
+    padding-top: 20px;
+}
+.about-me-desc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.about-me-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.office-space {
+    height: 100%;
+    width: 100%;
+}
 .nav-container {
     background-color: transparent;
     display: flex;
@@ -47,6 +102,10 @@ ul {
 }
 #nav-list {
     display: flex;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
 }
 .nav-btn {
     color: var(--navbar-default-font-color);
@@ -105,6 +164,11 @@ ul {
     height: 100vh;
     color: var(--navbar-default-font-color);
 }
+.about-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 .toggle-button {
     position: absolute;
     top: 1rem;
@@ -131,7 +195,7 @@ ul {
         width: 0;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .hello-para {
         font-size: 1.5rem;
     }
@@ -172,5 +236,23 @@ ul {
     .nav-logo {
         font-size: 1.5rem;
         padding: 15px 0px;
+    }
+    .about-me-desc-container {
+        padding: 0px;
+        width: 100%;
+    }
+    .about-me-main-container {
+        flex-direction: column;
+    }
+    .about-me-img-container {
+        padding: 20px;
+    }
+    .desc-para {
+        padding: 5px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 601px){
+    .about-me-img-container {
+        padding: 70px;
     }
 }
